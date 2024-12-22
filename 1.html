@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Task</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+  body { 
+    font-family: Arial, sans-serif; 
+    background: #ababab; 
+    margin: 0; 
+    padding: 20px;
+       }
+
+  .container { 
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    margin: auto; 
+    max-width: 600px;
+    padding: 20px;  
+           }
+
+  button { 
+    border: none;
+    background: #007bff;
+    margin: 10px 5px; 
+    padding: 8px 15px;  
+    color: #fff;  
+    cursor: pointer; 
+         }
+
+  button:hover { 
+    background: #000000; 
+               }
+  
+  .box { 
+    width: 100px; 
+    height: 100px; 
+    margin: 20px auto; 
+    background: #fd5817; 
+       }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>jQuery Demo</h1>
+    <p>This is an existing paragraph.</p>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+    <button id="append-btn">Append Content</button>
+    <button id="animate-btn">Animate Box</button>
+    <button id="change-color-btn">Change Box Color</button>
+    <div class="box"></div>
+  </div>
+
+
+  <script>
+
+      $('#append-btn').click(() => {
+        $('p').append(' This is appended content.');
+        $('ul').append('<li>New appended item</li>');
+      });
+
+      $('#animate-btn').click(() => {
+        $('.box').animate({ width: '200px', height: '200px' }, 1000);
+      });
+      $('#change-color-btn').click(() => {
+        $('.box').css('background-color', '#007bff');
+      });
+  </script>
+</body>
+</html>
